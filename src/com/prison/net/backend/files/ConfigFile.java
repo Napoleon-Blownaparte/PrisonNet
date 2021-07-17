@@ -47,6 +47,7 @@ public class ConfigFile {
             yml.set("config.resources.kickreason", "&cYou &nmust&c download the resource pack to play on this server!");
 
             // --------------------------------------- SQL CREDS ----------------------------------------
+            yml.set("config.database.enabled", false);
             yml.set("config.database.host", "");
             yml.set("config.database.port", 3306);
             yml.set("config.database.username", "");

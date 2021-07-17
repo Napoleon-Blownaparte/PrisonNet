@@ -3,6 +3,7 @@ package com.prison.net;
 import com.prison.net.backend.UpdateChecker;
 import com.prison.net.backend.api.Messages;
 import com.prison.net.backend.files.*;
+import com.prison.net.frontend.events.PlayerFirstJoin;
 import com.prison.net.frontend.modules.joinmessage.JoinMessages;
 import com.prison.net.frontend.modules.skins.SkinsCommand;
 import com.prison.net.frontend.modules.skins.SkinsMenu;
@@ -28,6 +29,7 @@ public class Main extends JavaPlugin {
 
         // Register Events
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+        getServer().getPluginManager().registerEvents(new PlayerFirstJoin(), this);
         getServer().getPluginManager().registerEvents(new SkinsMenu(), this);
 
         // Register Commands
@@ -48,7 +50,7 @@ public class Main extends JavaPlugin {
                 System.out.println("-------------------------------------------------------------------------");
             } else {
                 System.out.println("| Latest Version: " + version + "                                                 |");
-                System.out.println("| Type /prisonnet update to download the latest version                 |");
+                System.out.println("| Type '/prisonnet update' to download the latest version               |");
                 System.out.println("-------------------------------------------------------------------------");
                 System.out.println("| Disclaimer: You will NOT receive support for outdated versions        |");
                 System.out.println("-------------------------------------------------------------------------");
